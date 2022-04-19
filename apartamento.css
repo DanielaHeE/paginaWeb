@@ -1,0 +1,561 @@
+:root {
+    --fondo1: #7d807f63 ;
+    --fondo2: rgba(0, 0, 0, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* NAVBAR */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar button {
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+  
+.navbar button:hover {
+    background-color: #222522;
+    color: rgb(5, 5, 5);
+  }
+
+.navbar::before {
+    position: absolute;
+    content: "";
+    background-color: var(--fondo1);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    font-size: 1.1rem;
+}
+
+.navbar ul li a {
+    padding: 5px 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid yellow;
+}
+
+/* HOME SECTION */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    justify-content:center;
+    align-items:center;
+    background-color: var(--fondo1);
+    color: rgba(3, 90, 64, 0.397);
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(imagenes/pexels1.jpg) no-repeat center center/contain;
+    height: 700px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+.heading {
+    margin: 20px;
+    font-size: 3rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-align:center;
+    letter-spacing: .5rem;
+    transform: scale(1,1.3);
+}
+
+
+#home p{
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+}
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+    
+}
+
+	.social ul {
+		list-style: none;
+    }
+
+	.social ul li a {
+        display: inline-block;
+        height: 50px;
+        width: 60px;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-googleplus {background: #d95232;}
+	.social ul li .icon-pinterest {background: #ae181f;}
+	.social ul li .icon-mail {background: #666666;}
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+
+/* PORTFOLIO SECTION */
+
+
+#proyectos h2 {
+    color: #000;
+    margin: 30px;
+    font-size: xx-large;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif
+    
+}
+
+
+#proyectos .moderno p{
+    text-align: justify;
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 25px;
+    position: absolute;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#proyectos aside{
+    height: 400px;
+    width: 30%;
+    text-align: justify;
+    line-height: 25px;
+    margin-top: 250px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-left: 50px;
+    margin-right: 450px;
+    float:left;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff ;
+    position: absolute;
+
+}
+
+#proyectos img{
+    height: 500px;
+    width: 800px;
+    margin-top: 100px;
+    margin-left: 500px;
+    align-items: flex-end;
+      
+}
+
+#proyectos aside .cita{
+    float: right;
+    font-size: xx-small;
+    text-align: right;
+}
+
+#proyectos {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* CHAPINERO SECTION */
+
+#render h2{
+    color: #000;
+    margin: 30px;
+    font-size: xx-large;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#render h3{
+    text-align: justify;
+    line-height: 25px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    float:left;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+}
+
+#render div span{
+    color: rgb(129, 13, 13);
+}
+
+.img1{
+    height: 700px;
+    width: 1050px;
+    margin-top: 150px;
+    margin-left: 150px;
+    margin-right: 150px;
+    align-items: center;
+    /* border-style: dotted; */
+    /* border: 5px solid grey; */
+    border-radius:22px;
+   
+}
+
+.proceso h2{
+    color: #000;
+    margin: 30px;
+    font-size: xx-large;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.proceso h3{
+    margin-left: 50px;
+}
+
+.proceso p{
+    text-align: justify;
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 25px;
+    position: absolute;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.proceso h6{
+    color: #000;
+    margin-top: 270px;
+    margin-left: 50px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+}
+
+
+
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 10px;
+    
+}
+
+img.mediana{
+    width: 250px;
+    height:2;
+}
+
+.gallery img:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#arte {
+    display: flex;
+    flex-direction: column;
+    background-color: #0b53454b;
+    ;
+}
+
+#arte h1 {
+    margin: 60px;
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    text-align:center;
+    transform: scale(1,1.3);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 50px;
+}
+
+.box {
+    height: 500px;
+    width: 500px;
+    background-color: #0b53452d;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    /* border-style: inset;
+    border-width: 10px; */
+}
+
+.box1{
+    height: 500px;
+    width: 500px;
+    background-color: #0b534531;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 1.1rem;
+    position: relative;
+    /* border-style: inset;
+    border-width: 10px; */
+     
+}
+
+.box1 h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.box h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.box1 p {
+    color: white;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+.box p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* ABOUT ME */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: justify;
+}
+
+ 
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    text-align: center;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+#about h1 {
+    color: black;
+    margin: 55px;
+    
+}
+
+.caption-container{
+    color: #000000;
+    background-color: #a76b0aa6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.name {
+    padding: 10px;
+}
+
+.name h2 {
+    font-size: 2rem;
+}
+
+.name p {
+    font-size: 1.2rem;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000dc;
+}
+
+#contact h1 {
+    margin: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    padding: 15px 20px;
+    margin: 15px;
+    width: 40%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+}
+
+#message {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#submit {
+    padding: 15px 20px;
+    margin: 30px;
+    width: 15%;
+    border-radius: 20px;
+    background-color: #000000dc;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+#submit:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+ 
